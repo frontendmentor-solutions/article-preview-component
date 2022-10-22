@@ -1,0 +1,119 @@
+:root {
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --white: hsl(0, 0%, 100%);
+
+  --ff-sans: 'Manrope', sans-serif;
+
+  --fs-body: 0.813rem;
+  --fs-title: 1.25rem;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+
+  --br-small: 12px;
+  --br-full: 9999px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  position: relative;
+  min-height: 100vh;
+
+  font-family: var(--ff-sans);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+
+  background-color: var(--light-grayish-blue);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1.55fr;
+  max-width: 728px;
+  overflow: hidden;
+  border-radius: var(--br-small);
+  box-shadow: 0px 16px 32px -8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  padding: 2rem 2.5rem;
+  color: var(--desaturated-dark-blue);
+  background-color: var(--white);
+}
+
+.card-cover > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.card-title {
+  color: var(--dark-grayish-blue);
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.author-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.author-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--grayish-blue);
+  width: 100%;
+}
+
+.author-avatar > img {
+  width: 45px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.author-name {
+  color: var(--dark-grayish-blue);
+  font-weight: var(--fw-bold);
+}
+
+.author-links {
+  aspect-ratio: 1;
+  line-height: 0;
+  padding: 0.5rem;
+  background-color: var(--light-grayish-blue);
+  border-radius: var(--br-full);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  left: 0;
+  font-size: 12px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-weight: var(--fw-bold);
+}
